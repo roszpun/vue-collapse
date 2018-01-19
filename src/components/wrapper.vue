@@ -53,7 +53,6 @@
     }
 
     .v-collapse-content-start{
-        background: red;
         overflow: hidden;
         padding: 0;
     }
