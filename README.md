@@ -3,7 +3,7 @@ Vue.js 2 plugin allowing developers to create very custom accordion lists. It is
 
 [DEMO PAGE](https://roszpun.github.io/vue-collapse/)
 
-##Installation
+## Installation
 
 1. Download the npm package
 `npm install vue2-collapse`
@@ -11,29 +11,29 @@ Vue.js 2 plugin allowing developers to create very custom accordion lists. It is
 `import VueCollapse from 'vue2-collapse'`
 `Vue.use(VueCollapse);`
                                                    
-##Plugin elements
+## Plugin elements
 VueCollapse contains components and directives which provide easy way of building accordions:
 
-###Components
-####`v-collapse-wrapper`
-######Description:
+### Components
+#### `v-collapse-wrapper`
+###### Description:
 Wrapper component which should **always** be a parent of elements with `v-collapse-content ` and `v-collapse-toggle` directives.
 
-####`v-collapse-group`
-######Description:
+#### `v-collapse-group`
+###### Description:
 This is a group component. Sometimes there is a need of creating several different accordion lists. Grouping list elements helps with more complex cases. Components stores list of all elements in the accordion.
 
-###Directives
+### Directives
 
-####`v-collapse-content`
-######Description:
+#### `v-collapse-content`
+###### Description:
 This directive ought to be applied on the DOM element which will contain content of single list element. **Only** this element will be able to be toggled on and off within wrapper component. Element with this directive should **not** be a parent of the element with `v-collapse-toggle` directive
-####`v-collapse-toggle`
-######Description:
+#### `v-collapse-toggle`
+###### Description:
 The directive changes  a default behavior of the element and allows to click on it in order to toggle list element. Note that this directive should be located within the `<v-collapse-wrapper></v-collapse-wrapper>` in order to make it working without manual binding.
 However if it is needed to create a toggle element somewhere else, not inside the wrapper component you can use vue's reference to make it work.
 
-######Simple usage with Pug:
+###### Simple usage with Pug:
 Without grouping:
 ```
 ul
