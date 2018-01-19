@@ -1,6 +1,8 @@
 # vue-collapse
 Vue.js 2 plugin allowing developers to create very custom accordion lists. It is meant to be very flexible and easy to customize accordion plugin. Plugin itself does not provide any styling for any components or elements. The only included css supports the most basic slide up and down animation using the max-height and the transition properties. VueCollapse is rather a tool for developers who need to create custom accordion list.
 
+[DEMO PAGE](https://roszpun.github.io/vue-collapse/)
+
 ##Installation
 
 1. Download the npm package
