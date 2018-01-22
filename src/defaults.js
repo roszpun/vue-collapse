@@ -13,13 +13,23 @@ const defaults = {
     'contentClassEnd': prefix + '-content-end'
 };
 
-// Global toggle method
+// Global toggle methods
 
 const toggleElement = function (target, config) {
     target.classList.toggle(config.contentClassEnd);
 };
 
+const closeElement = function (target, config) {
+    target.classList.remove(config.contentClassEnd);
+};
+
+const openElement = function (target, config) {
+    target.classList.add(config.contentClassEnd);
+};
+
 module.exports={
     defaults,
-    toggleElement
+    toggleElement,
+    closeElement,
+    openElement,
 };

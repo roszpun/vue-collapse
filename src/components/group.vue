@@ -4,11 +4,19 @@
 </template>
 
 <script>
-    import {defaults, toggleElement} from './../defaults'
+    import {defaults} from './../defaults'
     export default {
         data: function () {
             return {}
         },
+
+        props: {
+            onlyOneActive: {
+                default: false,
+                type: Boolean
+            }
+        },
+
         // computed props for accessing elements
         computed: {
             elements : function () {
@@ -16,6 +24,11 @@
             },
             elements_count : function () {
                 return this.$children.length;
+            },
+            active_elements: function () {
+                return this.$children.filter(function (el) {
+                    return el.status === true;
+                })
             }
         },
         methods: {
