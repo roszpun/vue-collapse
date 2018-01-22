@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(:class="$options.$vc.basename + '-group'")
+    div(:class="v-collapse-group")
         slot
 </template>
 
