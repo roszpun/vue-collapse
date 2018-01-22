@@ -1,5 +1,5 @@
 <template lang="pug">
-    div(:class="$options.$vc.settings.basename")
+    div(:class="'vc-' + $options.$vc.settings.basename")
         slot
 </template>
 
