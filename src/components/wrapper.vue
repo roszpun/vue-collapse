@@ -59,9 +59,11 @@
         mounted: function () {
             this.nodes.toggle = this.$el.querySelector('.' + this.$options.$vc.settings.togglerClassDefault);
             this.nodes.content = this.$el.querySelector('.' + this.$options.$vc.settings.contentClassDefault);
-            this.nodes.toggle.addEventListener('click', () => {
-                this.toggle();
-            });
+            if(this.nodes.toggle !== null){
+                this.nodes.toggle.addEventListener('click', () => {
+                    this.toggle();
+                });
+            }
         }
     }
 </script>
