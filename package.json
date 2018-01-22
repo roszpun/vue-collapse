@@ -9,5 +9,9 @@
     "roszpun"
   ],
   "author": "roszpun <szerszen.daniel@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.33.0",
+    "vuep": "^0.8.0"
+  }
 }

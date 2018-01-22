@@ -1,6 +1,6 @@
-import CollapseWrapper from './components/wrapper.vue'
-import CollapseGroup from './components/group.vue'
-import {defaults} from './defaults'
+import CollapseWrapper from '/src/components/wrapper.vue'
+import CollapseGroup from '/src/components/group.vue'
+import {defaults} from '/src/defaults.js'
 
 let VueCollapse = {};
 VueCollapse.install = function (Vue, options) {
