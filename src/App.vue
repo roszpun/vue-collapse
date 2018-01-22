@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    v-collapse-group
+    v-collapse-group()
       v-collapse-wrapper
         article.message.is-warning
           .message-header(v-collapse-toggle="")
@@ -8,6 +8,20 @@
             button.delete(aria-label='delete')
           .message-body(v-collapse-content='')
             |Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      v-collapse-wrapper
+          article.message.is-warning
+              .message-header(v-collapse-toggle="")
+                  p Warning
+                  button.delete(aria-label='delete')
+              .message-body(v-collapse-content='')
+                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      v-collapse-wrapper
+          article.message.is-warning
+              .message-header(v-collapse-toggle="")
+                  p Warning
+                  button.delete(aria-label='delete')
+              .message-body(v-collapse-content='')
+                  |Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </template>
 
 <script>
