@@ -1,10 +1,12 @@
 {
-  "name" : "vue2-collapse",
-  "version": "1.0.0",
+  "name": "vue2-collapse",
+  "version": "1.0.1",
   "description": "Vue.js 2 accordion plugin",
-  "main" : "src/index.js",
+  "main": "src/index.js",
   "keywords": [
-    "vue", "accordion", "roszpun"
+    "vue",
+    "accordion",
+    "roszpun"
   ],
   "author": "roszpun <szerszen.daniel@gmail.com>",
   "license": "MIT"
