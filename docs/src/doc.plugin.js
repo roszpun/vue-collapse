@@ -90,6 +90,7 @@ VueCollapse.install = function (Vue, options) {
         // status watcher - change toggle element when status changes
         watch: {
             status: function (new_value, old_value) {
+                this.$emit('onStatusChange', {vm: this, status: new_value, old_status: old_value});
                 if (this.$parent.onlyOneActive === false) {
                     toggleElement(this.nodes.content, this.$options.$vc.settings);
                 } else {
@@ -118,13 +119,19 @@ VueCollapse.install = function (Vue, options) {
 
         methods: {
             toggle: function () {
+                this.$emit('beforeToggle', this);
                 this.status = !this.status;
+                this.$emit('afterToggle', this);
             },
             close: function () {
+                this.$emit('beforeClose', this);
                 this.status = false;
+                this.$emit('afterClose', this);
             },
             open: function () {
+                this.$emit('beforeOpen', this);
                 this.status = true;
+                this.$emit('afterOpen', this);
             },
         },
 
@@ -133,6 +140,7 @@ VueCollapse.install = function (Vue, options) {
         mounted: function () {
             this.nodes.toggle = this.$el.querySelector('.' + this.$options.$vc.settings.togglerClassDefault);
             this.nodes.content = this.$el.querySelector('.' + this.$options.$vc.settings.contentClassDefault);
+            this.$emit('afterNodesBinding', {vm: this, nodes: this.nodes});
             if(this.nodes.toggle !== null){
                 this.nodes.toggle.addEventListener('click', () => {
                     this.toggle();

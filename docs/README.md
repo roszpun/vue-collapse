@@ -157,7 +157,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
       <button v-collapse-toggle="'toggle_first'">Toggle first element</button>
       <button v-collapse-toggle="'toggle_second'">Toggle second element</button>
       
-      <v-collapse-wrapper ref="toggle_first">
+      <v-collapse-wrapper ref="toggle_first" v-on:beforeToggle="beforeToggle()">
           <div class="my-content" v-collapse-content>
               This is hiddend content
           </div>
@@ -175,6 +175,11 @@ However if it is needed to create a toggle element somewhere else, not inside th
     module.exports = {
       data: function () {
         return {}
+      },
+      methods:{
+      beforeToggle : function(){
+        console.log('siema')
+      }
       }
     }
   </script>
