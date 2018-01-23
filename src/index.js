@@ -32,7 +32,6 @@ VueCollapse.install = function (Vue, options) {
 
         bind (el, binding, vnode, oldVnode) {
             vnode.elm.classList.add(vnode.context.$options.$vc.settings.contentClassDefault);
-            vnode.elm.classList.add(vnode.context.$options.$vc.settings.contentClassStart);
         }
     });
 
