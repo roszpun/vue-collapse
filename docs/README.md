@@ -29,7 +29,7 @@ Every collapse element requires the `<v-collapse-wrapper></v-collapse-wrapper>` 
 ``` html
 <v-collapse-wrapper>
     <div class="header" v-collapse-toggle>
-        Click me to see content
+        Click me to toggle content
     </div>
     <div class="content" v-collapse-content>
         This is hiddend content
@@ -83,12 +83,12 @@ VueCollapse allows to nest elements inside each other. The nested element should
 ``` html
 <v-collapse-wrapper>
     <div class="header" v-collapse-toggle>
-        Click me to see content
+        Click me to toggle content
     </div>
     <div class="content" v-collapse-content>
         <v-collapse-wrapper>
             <div class="header" v-collapse-toggle>
-                Click me to see content
+                Click toggle to toggle content
             </div>
             <div class="content" v-collapse-content>
                 This is hiddend content
@@ -125,7 +125,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
     <div>
      <v-collapse-wrapper>
          <div class="header" v-collapse-toggle>
-             Click me to see content
+             Click me to toggle content
          </div>
          <div class="my-content" v-collapse-content>
              This is hiddend content
@@ -135,7 +135,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -171,7 +171,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -205,7 +205,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -213,6 +213,43 @@ However if it is needed to create a toggle element somewhere else, not inside th
     }
   </script>
 </script>
+
+### Nested accordions
+<vuep template="#example-nested"></vuep>
+
+<script v-pre type="text/x-template" id="example-nested">
+  <template>
+    <div>
+     <v-collapse-wrapper>
+         <div class="header" v-collapse-toggle>
+             Click me to toggle content
+         </div>
+         <div class="my-content" v-collapse-content>
+             <v-collapse-wrapper>
+                 <div class="header" v-collapse-toggle>
+                     Click toggle to toggle content
+                 </div>
+                 <div class="my-content" v-collapse-content>
+                     This is hiddend content
+                 </div>
+             </v-collapse-wrapper>
+         </div>
+     </v-collapse-wrapper>
+    </div>
+  </template>
+
+  <script>
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+    module.exports = {
+      data: function () {
+        return {}
+      }
+    }
+  </script>
+</script>
+
+
+
 
 ## Complex usage
 
@@ -225,7 +262,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
     <div>
         <v-collapse-wrapper>
             <div class="header" v-collapse-toggle>
-                Click me to see content
+                Click me to toggle content
             </div>
             <div class="hidden-content" v-collapse-content>
                 This is hiddend content
@@ -235,7 +272,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse//vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
