@@ -1,4 +1,4 @@
-> VueCollapse - a flexible accordion plugin
+> VueCollapse - a flexible accordion plugin for Vue.js 2
 
 # Getting started
 
