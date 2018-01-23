@@ -17,7 +17,7 @@ div
                 label.checkbox
                     input(type='checkbox' v-collapse-toggle="'show_more_fields'")
                     |&nbsp; Yes, I have promo code (click me)
-        v-collapse-wrapper(ref="show_more_fields")
+        v-collapse-wrapper(ref="show_more_fields" v-on:onToggle="test()")
             div(v-collapse-content="")
                 .field
                     label.label Name
@@ -80,7 +80,12 @@ export default {
                 a.button.is-light
                     | Cancel`
     }
-  }
+  },
+    methods: {
+     test :function (vm) {
+         console.log(vm)
+     }
+    }
 }
 </script>
 
