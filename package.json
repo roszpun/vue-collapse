@@ -10,7 +10,7 @@
   ],
   "author": "roszpun <szerszen.daniel@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "codemirror": "^5.33.0",
     "vuep": "^0.8.0"
   }
