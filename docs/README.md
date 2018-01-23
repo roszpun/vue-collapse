@@ -209,7 +209,7 @@ module.exports = {
     ...
     methods : {
             my_custom_action : function(vm){
-                console.log(my_custom_action); // logs component object before closing itself
+                console.log(vm); // logs component object before closing itself
             }
         }
     ...
