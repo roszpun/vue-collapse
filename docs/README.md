@@ -266,7 +266,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -302,7 +302,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -341,7 +341,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -375,7 +375,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
