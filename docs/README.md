@@ -231,8 +231,24 @@ Every wrapper components stores necessary data properties, which can be used at 
 ### v-collapse-group
 This is a group component. Sometimes there is a need of creating several different accordion lists. Grouping list elements helps with more complex cases. Components stores list of all elements in the accordion.
 
+
+``` html
+<v-collapse-group :onlyOneActive="true">
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+</v-collapse-group>
+
+<v-collapse-group>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+</v-collapse-group>
+```
+First collapse group will allow only one element to be opened at the same time, while the second group can open all of the elements at the same time.
+
 #### Computed properties
-TODO
+ 
 #### Custom properties
 TODO
 #### Methods
@@ -244,7 +260,7 @@ This directive ought to be applied on the DOM element which will contain content
 
 ### v-collapse-toggle
 The directive changes  a default behavior of the element and allows to click on it in order to toggle list element. Note that this directive should be located within the `<v-collapse-wrapper></v-collapse-wrapper>` in order to make it working without manual binding.
-However if it is needed to create a toggle element somewhere else, not inside the wrapper component you can use vue's reference to make it work.
+However if there is a need to create the toggle element somewhere else, not inside the wrapper component you can use vue's reference to make it work. 
 
 # Examples
 
@@ -266,7 +282,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -302,7 +318,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -341,7 +357,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
@@ -375,7 +391,7 @@ However if it is needed to create a toggle element somewhere else, not inside th
   </template>
 
   <script>
-  import VueCollapse from '/vue-collapse/src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
+  import VueCollapse from '../src/doc.plugin.js' // different version of plugin. It has to be that way in order to make preview work.
     module.exports = {
       data: function () {
         return {}
