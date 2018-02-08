@@ -1,6 +1,7 @@
-<template lang="pug">
-    div(class="v-collapse-group")
-        slot
+<template>
+    <div class="v-collapse-group">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
