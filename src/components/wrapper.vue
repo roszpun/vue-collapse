@@ -14,6 +14,18 @@
                 status: false,
             }
         },
+        props:['active'],
+
+        computed: {
+            computedClass: function () {
+                if ( this.active != null ) {
+                    return this.status = this.active;
+                }
+                return this.status;
+            }
+    },
+
+
         // status watcher - change toggle element when status changes
         watch: {
                 status: function (new_value, old_value) {
