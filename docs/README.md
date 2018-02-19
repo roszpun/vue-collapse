@@ -216,6 +216,32 @@ module.exports = {
 }
 ``` 
 
+#### Custom properties
+
+Vue collapse wrapper for now accepts only one custom property- `active` which is used status of the accordion element. 
+
+| Custom property | Type |  Description |
+| ------------- |:-------------:|:-------------:|
+| `v-bind:active`    | Boolean | Changes the default status of the element while rendering. 
+
+**Notice:**  the `v-bind:active` property overrides the default status of element, however the default behaviour of the accordion is **not** changed. Setting `:active="true"` to every element of the accordion list which is using `:onlyOneActive="true"` property on the group component will outcome with opening only the first element.
+
+##### Usage
+The status of the collapse element will be set to true while rendering. 
+Template:
+``` html
+    <v-collapse-wrapper  :active="true">
+         <div class="header" v-collapse-toggle>
+             Click me to toggle content
+         </div>
+        <div class="my-content" v-collapse-content>
+            This is hiddend content
+        </div>
+    </v-collapse-wrapper>
+``` 
+
+The property is reactive so it can be used for more complex usage as well.
+
 #### Data properties
 
 Every wrapper components stores necessary data properties, which can be used at some point while extending plugin to own needs.
@@ -229,6 +255,7 @@ Every wrapper components stores necessary data properties, which can be used at 
 
 
 ### v-collapse-group
+
 This is a group component. Sometimes there is a need of creating several different accordion lists. Grouping list elements helps with more complex cases. Components stores list of all elements in the accordion.
 
 
@@ -245,16 +272,73 @@ This is a group component. Sometimes there is a need of creating several differe
     <v-collapse-wrapper> ... </v-collapse-wrapper>
 </v-collapse-group>
 ```
+
 First collapse group will allow only one element to be opened at the same time, while the second group can open all of the elements at the same time.
 
 #### Computed properties
- 
+
+| Computed property | Type |  Description |
+| ------------- |:-------------:|:-------------:|
+| `elements`    | Array | Returns the array of `v-collapse-wrapper` objects in the group.
+| `elements_count`    | Integer | Returns the length of elements array.
+| `active_elements`    | Array | Returns the array of the **active** `v-collapse-wrapper` objects in the group.
+
 #### Custom properties
-TODO
+
+| Custom property | Type |  Description |
+| ------------- |:-------------:|:-------------:|
+| `v-bind:onlyOneActive`    | Boolean | Allow only one accordion element to be opend (`status: true`).
+
+##### Usage
+
+``` html
+<v-collapse-group :onlyOneActive="true">
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+    <v-collapse-wrapper> ... </v-collapse-wrapper>
+</v-collapse-group>
+```
+
 #### Methods
-TODO
+
+| Method        | Description |  Parameters |
+| ------------- |:-------------:|:-------------:|
+| `.openAll()`    | Open all instances of v-collapse-wrapper component within group | none
+| `.closeAll()`      | Close all instances of v-collapse-wrapper component within group| none
+
+##### Usage
+
+Template:
+``` html
+<v-collapse-group ref="my_group">
+    <v-collapse-wrapper>
+        <div class="my-content" v-collapse-content>
+            This is hiddend content
+        </div>
+    </v-collapse-wrapper>
+    <v-collapse-wrapper>
+        <div class="my-content" v-collapse-content>
+            This is hiddend content
+        </div>
+    </v-collapse-wrapper>
+</v-collapse-group>
+``` 
+
+Vue instance:
+``` javascript
+module.exports = {
+    ...
+    methods : {
+            open_second : function(){
+                this.$refs.my_group.openAll(); // opens all elements
+            }
+        }
+    ...
+}
+``` 
 
 ## Directives
+
 ### v-collapse-content
 This directive ought to be applied on the DOM element which will contain content of single list element. **Only** this element will be able to be toggled on and off within wrapper component. Element with this directive should **not** be a parent of the element with `v-collapse-toggle` directive.
 
