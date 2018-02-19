@@ -218,7 +218,7 @@ module.exports = {
 
 #### Custom properties
 
-Vue collapse wrapper for now accepts only one custom property- `active` which is used status of the accordion element. 
+Vue collapse wrapper for now accepts only one custom property- `active` which is used for changing the status of the accordion element. 
 
 | Custom property | Type |  Description |
 | ------------- |:-------------:|:-------------:|
@@ -228,6 +228,7 @@ Vue collapse wrapper for now accepts only one custom property- `active` which is
 
 ##### Usage
 The status of the collapse element will be set to true while rendering. 
+
 Template:
 ``` html
     <v-collapse-wrapper  :active="true">
@@ -244,7 +245,7 @@ The property is reactive so it can be used for more complex usage as well.
 
 #### Data properties
 
-Every wrapper components stores necessary data properties, which can be used at some point while extending plugin to own needs.
+Every wrapper component stores necessary data properties, which can be used while extending plugin to own needs.
 
 | Data property | Type |  Description |
 | ------------- |:-------------:|:-------------:|
@@ -256,7 +257,7 @@ Every wrapper components stores necessary data properties, which can be used at 
 
 ### v-collapse-group
 
-This is a group component. Sometimes there is a need of creating several different accordion lists. Grouping list elements helps with more complex cases. Components stores list of all elements in the accordion.
+This is a group component. Sometimes there is a need of creating several different accordion lists. Grouping list elements helps with this and other different cases.
 
 
 ``` html
@@ -289,22 +290,13 @@ First collapse group will allow only one element to be opened at the same time, 
 | ------------- |:-------------:|:-------------:|
 | `v-bind:onlyOneActive`    | Boolean | Allow only one accordion element to be opend (`status: true`).
 
-##### Usage
-
-``` html
-<v-collapse-group :onlyOneActive="true">
-    <v-collapse-wrapper> ... </v-collapse-wrapper>
-    <v-collapse-wrapper> ... </v-collapse-wrapper>
-    <v-collapse-wrapper> ... </v-collapse-wrapper>
-</v-collapse-group>
-```
 
 #### Methods
 
 | Method        | Description |  Parameters |
 | ------------- |:-------------:|:-------------:|
-| `.openAll()`    | Open all instances of v-collapse-wrapper component within group | none
-| `.closeAll()`      | Close all instances of v-collapse-wrapper component within group| none
+| `.openAll()`    | Open all instances of `v-collapse-wrapper` component within group | none
+| `.closeAll()`      | Close all instances of `v-collapse-wrapper` component within group| none
 
 ##### Usage
 
@@ -329,7 +321,7 @@ Vue instance:
 module.exports = {
     ...
     methods : {
-            open_second : function(){
+            open_all : function(){
                 this.$refs.my_group.openAll(); // opens all elements
             }
         }
@@ -390,12 +382,12 @@ However if there is a need to create the toggle element somewhere else, not insi
       
       <v-collapse-wrapper ref="toggle_first" v-on:beforeToggle="beforeToggle()">
           <div class="my-content" v-collapse-content>
-              This is hiddend content
+              This is hiddend content 1
           </div>
       </v-collapse-wrapper>
       <v-collapse-wrapper ref="toggle_second">
           <div class="my-content" v-collapse-content>
-              This is hiddend content
+              This is hiddend content 2
           </div>
       </v-collapse-wrapper>
     </div>
