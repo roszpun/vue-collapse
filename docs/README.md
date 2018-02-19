@@ -420,12 +420,12 @@ However if there is a need to create the toggle element somewhere else, not insi
       <v-collapse-group>  
           <v-collapse-wrapper ref="toggle_first">
               <div class="my-content" v-collapse-content>
-                  This is hiddend content
+                  This is hiddend content 1
               </div>
           </v-collapse-wrapper>
           <v-collapse-wrapper ref="toggle_second">
               <div class="my-content" v-collapse-content>
-                  This is hiddend content
+                  This is hiddend content 2
               </div>
           </v-collapse-wrapper>
       </v-collapse-group>
@@ -455,10 +455,10 @@ However if there is a need to create the toggle element somewhere else, not insi
          <div class="my-content" v-collapse-content>
              <v-collapse-wrapper>
                  <div class="header" v-collapse-toggle>
-                     Click toggle to toggle content
+                     Click here to toggle nested content
                  </div>
                  <div class="my-content" v-collapse-content>
-                     This is hiddend content
+                     This is hiddend nested content
                  </div>
              </v-collapse-wrapper>
          </div>
