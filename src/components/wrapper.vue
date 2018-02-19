@@ -1,7 +1,6 @@
-<template>
-    <div :class="'vc-' + $options.$vc.settings.basename">
-        <slot></slot>
-    </div>
+<template lang="pug">
+    div(:class="'vc-' + $options.$vc.settings.basename")
+        slot
 </template>
 
 <script>
@@ -14,20 +13,17 @@
                 status: false,
             }
         },
-        props:['active'],
-
-        computed: {
-            computedClass: function () {
-                if ( this.active != null ) {
-                    return this.status = this.active;
-                }
-                return this.status;
-            }
-    },
-
+        
+        props: ['active'],
 
         // status watcher - change toggle element when status changes
         watch: {
+                active: function(status){
+                      if ( status != null ) {
+                        this.status = status;
+                    }
+                },
+
                 status: function (new_value, old_value) {
                     this.$emit('onStatusChange', {vm: this, status: new_value, old_status: old_value});
                     if (this.$parent.onlyOneActive === false) {
@@ -84,6 +80,9 @@
                 this.nodes.toggle.addEventListener('click', () => {
                     this.toggle();
                 });
+            }
+            if ( this.active != null ) {
+                    this.status = this.active;
             }
         }
     }
