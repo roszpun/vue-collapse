@@ -1,6 +1,7 @@
-<template lang="pug">
-    div(:class="'vc-' + $options.$vc.settings.basename")
-        slot
+<template>
+    <div :class="'vc-' + $options.$vc.settings.basename">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
