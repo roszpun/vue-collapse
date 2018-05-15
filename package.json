@@ -1,17 +1,48 @@
 {
-  "name": "vue2-collapse",
-  "version": "1.0.11",
-  "description": "Vue.js 2 accordion plugin",
-  "main": "src/index.js",
-  "keywords": [
-    "vue",
-    "accordion",
-    "roszpun"
-  ],
-  "author": "roszpun <szerszen.daniel@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "codemirror": "^5.33.0",
-    "vuep": "^0.8.0"
-  }
+    "name": "vue2-collapse",
+    "version": "1.0.11",
+    "license": "MIT",
+    "main": "src/index.js",
+    "description": "Vue.js 2 accordion plugin",
+    "author": "roszpun <szerszen.daniel@gmail.com>",
+    "keywords": [
+        "vue",
+        "accordion",
+        "roszpun"
+    ],
+    "scripts": {
+        "build": "node build/build.js",
+        "dev": "node build/dev-server.js"
+    },
+    "devDependencies": {
+        "codemirror": "^5.33.0",
+        "vuep": "^0.8.0",
+        "babel-core": "^6.26.0",
+        "babel-jest": "^22.0.4",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-stage-2": "^6.24.1",
+        "chalk": "^2.1.0",
+        "connect-history-api-fallback": "^1.3.0",
+        "css-loader": "^0.28.6",
+        "express": "^4.15.4",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "friendly-errors-webpack-plugin": "^1.6.1",
+        "html-webpack-plugin": "^2.30.1",
+        "http-proxy-middleware": "^0.17.4",
+        "jest": "^21.2.1",
+        "node-sass": "^4.7.2",
+        "ora": "^1.3.0",
+        "sass-loader": "^6.0.6",
+        "vue-loader": "^13.0.4",
+        "vue-template-compiler": "^2.4.2",
+        "webpack": "^3.10.0",
+        "webpack-dev-middleware": "^1.12.0",
+        "webpack-hot-middleware": "^2.18.2",
+        "webpack-merge": "^4.1.0"
+    },
+    "files": [
+        "src",
+        "vue-collapsible"
+    ]
 }
