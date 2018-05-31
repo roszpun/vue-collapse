@@ -2,7 +2,7 @@
     "name": "vue2-collapse",
     "version": "1.0.12",
     "license": "MIT",
-    "main": "src/index.js",
+    "main": "dist/vue-collapsible.js",
     "description": "Vue.js 2 accordion plugin",
     "author": "roszpun <szerszen.daniel@gmail.com>",
     "keywords": [
