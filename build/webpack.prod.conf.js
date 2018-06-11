@@ -8,6 +8,8 @@ const baseWebpackConfig = require('./webpack.base.conf');
 module.exports = merge(baseWebpackConfig, {
   output: {
     path: path.resolve(__dirname, '../dist'),
+    library: 'vue2-collapse',
+    libraryTarget: 'umd'
   },
   devtool: false,
   plugins: [
