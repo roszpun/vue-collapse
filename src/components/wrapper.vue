@@ -1,5 +1,5 @@
 <template>
-    <div :class="'vc-' + $options.$vc.settings.basename">
+    <div :class="'vc-' + $options.$vc.settings.basename + ' open-is' + $data.status">
         <slot></slot>
     </div>
 </template>
