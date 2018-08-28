@@ -72,7 +72,7 @@
         this.SetHeightCalculator();
       },
 
-      //Calculat height of content
+      //Calculate height of content
       SetHeightCalculator: function () {
         let _hg = this.nodes.content.scrollHeight + 'px';
         this.nodes.content.setAttribute("style", "max-height:" + _hg);
