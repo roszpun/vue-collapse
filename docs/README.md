@@ -45,15 +45,15 @@ The div element with `header` class thanks to `v-collapse-toggle` directive will
 
 ``` css
 .v-collapse-content{
-max-height: 0;
-transition: max-height 0.3s ease-out;
-overflow: hidden;
-padding: 0;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    padding: 0;
 }
 
 .v-collapse-content-end{
-transition: max-height 0.3s ease-in;
-max-height: 500px;
+    transition: max-height 0.3s ease-in;
+    max-height: 500px;
 }
 ```
 
