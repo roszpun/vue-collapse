@@ -41,6 +41,22 @@ The div element with `header` class thanks to `v-collapse-toggle` directive will
 
 **By the default only one accordion element can be opened, toggling another will close previously opened element.**
 
+#### Basic CSS to show/hide
+
+``` css
+.v-collapse-content{
+max-height: 0;
+transition: max-height 0.3s ease-out;
+overflow: hidden;
+padding: 0;
+}
+
+.v-collapse-content-end{
+transition: max-height 0.3s ease-in;
+max-height: 500px;
+}
+```
+
 ### Grouping elements
 
 VueCollapse allows to wrap more elements into a group components `<v-collapse-group></v-collapse-group>`, which helps with code organisation and provides some additional functionality. 
