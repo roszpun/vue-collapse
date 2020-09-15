@@ -48,6 +48,20 @@ v-collapse-group
         .content(v-collapse-content, ref="'custom_toggler'") This content which will be toggled
       ...
 ```
+## Basic CSS to show/hide
+```
+.v-collapse-content{
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    padding: 0;
+}
+   
+.v-collapse-content-end{
+    transition: max-height 0.3s ease-in;
+    max-height: 500px;
+}
+```
                                                                                                       
 ## Plugin elements
 VueCollapse contains components and directives which provide easy way of building accordions:
